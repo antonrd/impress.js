@@ -69,18 +69,19 @@ ul.boring-list {
   list-style: disc;
 }
 
-/* forcing a width onto all steps */
-.step {
-  position: relative;
-  margin: 20px auto;
-  width: 900px;
-  padding: 40px;
+.step { 
+  width:940px; 
+  height: 680px; 
+  margin:0 auto 24px auto; 
+  text-align:center; 
+  border: solid 1px #000; 
+  background-color: #ddd;
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    -ms-box-sizing:     border-box;
-    -o-box-sizing:      border-box;
-    box-sizing:         border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  -ms-box-sizing:     border-box;
+  -o-box-sizing:      border-box;
+  box-sizing:         border-box;
 }
 
 /* 
@@ -193,3 +194,9 @@ ul.boring-list {
   float: right;
 }
 
+.annotation-layer { 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+}

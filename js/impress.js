@@ -153,6 +153,7 @@
     // `computeWindowScale` counts the scale factor between window size and size
     // defined for the presentation in the config.
     var computeWindowScale = function ( config ) {
+        return 1.0;
         var hScale = window.innerHeight / config.height,
             wScale = window.innerWidth / config.width,
             scale = hScale > wScale ? wScale : hScale;
