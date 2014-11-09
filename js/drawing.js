@@ -6,6 +6,14 @@
     var paint;
 
     $('.step').append('<canvas width="940" height="680" class="annotation-layer"></canvas>');
+    $('body').append('<button class="clear-canvas">Clear slide</button>');
+    $('.clear-canvas').bind('click', function() {
+      $('.step.active > canvas')[0].getContext('2d').clearRect(0, 0, 940, 680);
+      element_id = $('.step.active')[0].id
+      clickX[element_id] = [];
+      clickY[element_id] = [];
+      clickDrag[element_id] = [];
+    })
 
     // for (var i = 0; i < slide_objects.length; i++) {
     //   slide_objects[i].append('<canvas width="940" height="680" class="annotation-layer"></canvas>')
