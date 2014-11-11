@@ -7,6 +7,8 @@ Look at simple_with_annotations.html to see annotations in action.
 
 There is a lot of work to make this code more complete. I'm just starting now.
 
+A simple demo showing how this looks like: [http://antonrd.github.io/impress.js/](http://antonrd.github.io/impress.js/).
+
 LICENSE
 ---------
 Released under the MIT and GPL (version 2 or later) Licenses.
