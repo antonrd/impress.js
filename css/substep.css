@@ -30,6 +30,7 @@ body {
   margin-top: 250px;
   margin-left: 0 auto;
   margin-right: 0 auto;
+  text-align: center;
 }
 
 .main-subtitle {
@@ -39,6 +40,7 @@ body {
   margin-top: 50px;
   margin-left: 0 auto;
   margin-right: 0 auto;
+  text-align: center;
 }
 
 a, a:visited {
@@ -90,7 +92,7 @@ ul.boring-list {
 }
 
 .step { 
-  width: 940px; 
+  width: 1088px; 
   height: 680px; 
   margin: 0 auto 24px auto;  
   border: solid 1px #888; 
@@ -111,10 +113,10 @@ ul.boring-list {
 }
 
 .substep {
-  font-size: 24px;
+  font-size: 28px;
   margin-left: 60px;
   text-align: left;
-  line-height: 40px;
+  line-height: 60px;
 }
 
 /* 
@@ -170,10 +172,10 @@ ul.boring-list {
   when a substep has focus it is 'present'
   so we add some color to make it all fancy
 */
-.impress-enabled .substep.present { 
+/*.impress-enabled .substep.present { 
   color: rgb(100, 135, 195);
 }
-
+*/
 /*
   this is just a silly animation for the 
   information overload text on the 
@@ -280,7 +282,7 @@ ul.boring-list {
 }
 
 .CodeMirror {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .steps-control {
@@ -289,4 +291,17 @@ ul.boring-list {
   top: 270px;
   width: 120px;
   font-size: 12px;
+}
+
+table.array-with-numbers {
+  border-collapse: collapse;
+  font-size: 32px;
+  color: rgb(100, 135, 195);
+}
+
+table.array-with-numbers td {
+  border: solid 2px #999;
+  width: 40px;
+  padding: 5px;
+  text-align: center;
 }
