@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>impress.js - substep fork - by tehfoo</title>
+
+  <link rel="stylesheet" href="css/substep.css">
+  <link rel="stylesheet" href="js/codemirror/lib/codemirror.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/codemirror/lib/codemirror.js"></script>
+  <script src="js/codemirror/addon/selection/active-line.js"></script>
+  <script src="js/codemirror/mode/clike/clike.js"></script>
+
+</head>
+<body>
+  <div id="impress">
+
+    <div id="introduction" class="step" data-x="0" data-y="0">
+      <h1>Substeps with a list</h1>
+      <ul>
+        <li class="substep">Sure!</li>
+        <li class="substep">Just add the 'substep' class</li>
+        <li class="substep">and amaze your friends</li>
+        <li class="substep">with substep goodness!</li>
+      </ul>
+
+    </div>
+
+    <div id="next-slide" class="step" data-x="1500" data-y="0">
+      <h1>Code in C++</h1>
+      <div style="margin-left: 0px;"><textarea id="cpp-code">
+      #include <iostream>
+      #include "mystuff/util.h"
+
+      namespace {
+
+      char32_t unicode_string = U"\U0010FFFF";
+      string raw_string = R"delim(anything
+      you
+      want)delim";
+
+      class ForwardDec;
+
+      template <class T, class V>
+      void Class::Method2(MyType<T, V>* value) {
+        std::out << 1 >> method();
+        value->Method3(member_);
+        member_ = value;
+      }
+      </textarea></div>
+    </div>
+
+    <div id="annotations-slide" class="step" data-x="3000" data-y="0">
+      <h1>Substeps with divs</h1>
+      <div class="substep">Finally, you can also draw on the slide</div>
+      <div class="substep">Just use your mouse and start annotating</div>
+      <div class="substep">It's possible to clear using the red button at top left corner</div>
+    </div>
+
+  <script src="js/impress.js"></script>
+  <script src="js/drawing.js"></script>
+  <script>impress().init();</script>
+  <script>Drawing.setupAll();</script>
+
+  <script>
+    var cppEditor = CodeMirror.fromTextArea(document.getElementById("cpp-code"), {
+      lineNumbers: true,
+      matchBrackets: true,
+      mode: "text/x-c++src",
+      readOnly: false,
+      lineWrapping: true,
+      styleActiveLine: true,
+    });
+    cppEditor.setSize(750, 500);
+  </script>
+
+</body>
+</html>

@@ -102,5 +102,3 @@ var Drawing = (function (drawing) {
     return drawing;
 
 }(Drawing || {}));
-
-Drawing.setupAll();
