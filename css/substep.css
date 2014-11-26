@@ -282,3 +282,11 @@ ul.boring-list {
 .CodeMirror {
   font-size: 24px;
 }
+
+.steps-control {
+  position: absolute;
+  left: 20px;
+  top: 270px;
+  width: 120px;
+  font-size: 12px;
+}

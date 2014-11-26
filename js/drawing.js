@@ -23,6 +23,7 @@ var Drawing = (function (drawing) {
       $('body').append('<button class="pen-color green-pen"></button>');
       $('body').append('<button class="pen-color blue-pen"></button>');
       $('body').append('<button class="pen-color orange-pen"></button>');
+      $('body').append('<span class="steps-control">Pg Down - next step Pg Up - prev step</span>');
       $('.clear-canvas').bind('click', function() {
         $('.step.active > canvas')[0].getContext('2d').clearRect(0, 0, 940, 680);
         element_id = $('.step.active')[0].id
