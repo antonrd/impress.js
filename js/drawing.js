@@ -1,6 +1,6 @@
 var Drawing = (function (drawing) {
 
-    var SLIDE_WIDTH = 940;
+    var SLIDE_WIDTH = 1088;
     var SLIDE_HEIGHT = 680;
     var CLEAR_BUTTON_LABEL = "Clear slide";
 
@@ -25,7 +25,7 @@ var Drawing = (function (drawing) {
       $('body').append('<button class="pen-color orange-pen"></button>');
       $('body').append('<span class="steps-control">Pg Down - next step Pg Up - prev step</span>');
       $('.clear-canvas').bind('click', function() {
-        $('.step.active > canvas')[0].getContext('2d').clearRect(0, 0, 940, 680);
+        $('.step.active > canvas')[0].getContext('2d').clearRect(0, 0, SLIDE_WIDTH, SLIDE_HEIGHT);
         element_id = $('.step.active')[0].id
         clickX[element_id] = [];
         clickY[element_id] = [];
