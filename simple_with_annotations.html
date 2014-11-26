@@ -5,9 +5,13 @@
   <title>impress.js - substep fork - by tehfoo</title>
 
   <link rel="stylesheet" href="css/substep.css">
+  <link rel="stylesheet" href="js/codemirror/lib/codemirror.css">
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/codemirror/lib/codemirror.js"></script>
+  <script src="js/codemirror/addon/selection/active-line.js"></script>
+  <script src="js/codemirror/mode/clike/clike.js"></script>
 
 </head>
 <body>
@@ -25,11 +29,27 @@
     </div>
 
     <div id="next-slide" class="step" data-x="1500" data-y="0">
-      <h1>Substeps with divs</h1>
-      <div class="substep">You can go backward still!</div>
-      <div class="substep">If you can't figure out how</div>
-      <div class="substep">look at the arrow keys</div>
-      <div class="substep">and think about it real hard...</div>
+      <h1>Code in C++</h1>
+      <div style="margin-left: 0px;"><textarea id="cpp-code">
+      #include <iostream>
+      #include "mystuff/util.h"
+
+      namespace {
+
+      char32_t unicode_string = U"\U0010FFFF";
+      string raw_string = R"delim(anything
+      you
+      want)delim";
+
+      class ForwardDec;
+
+      template <class T, class V>
+      void Class::Method2(MyType<T, V>* value) {
+        std::out << 1 >> method();
+        value->Method3(member_);
+        member_ = value;
+      }
+      </textarea></div>
     </div>
 
     <div id="annotations-slide" class="step" data-x="3000" data-y="0">
@@ -42,6 +62,19 @@
   <script src="js/impress.js"></script>
   <script src="js/drawing.js"></script>
   <script>impress().init();</script>
+  <script>Drawing.setupAll();</script>
+
+  <script>
+    var cppEditor = CodeMirror.fromTextArea(document.getElementById("cpp-code"), {
+      lineNumbers: true,
+      matchBrackets: true,
+      mode: "text/x-c++src",
+      readOnly: false,
+      lineWrapping: true,
+      styleActiveLine: true,
+    });
+    cppEditor.setSize(750, 500);
+  </script>
 
 </body>
 </html>
