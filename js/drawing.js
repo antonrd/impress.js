@@ -18,6 +18,7 @@ var Drawing = (function (drawing) {
 
     var setupControls = function() {
       $('.step').append('<canvas width="' + SLIDE_WIDTH + '" height="' + SLIDE_HEIGHT + '" class="annotation-layer"></canvas>');
+
       $('body').append('<button class="clear-canvas">' + CLEAR_BUTTON_LABEL + '</button>');
       $('body').append('<button class="pen-color red-pen"></button>');
       $('body').append('<button class="pen-color green-pen"></button>');
